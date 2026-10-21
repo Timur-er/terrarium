@@ -1,0 +1,35 @@
+{
+  "seed": 2026,
+  "sols": 3,
+  "domes": 2,
+  "brain": "jev:jev-latest",
+  "systemTwo": false,
+  "elapsedSeconds": 606,
+  "population": 39,
+  "decisions": 2677,
+  "brainCalls": 1535,
+  "service": {
+    "backend": "jev:jev-latest",
+    "decisions": 4535,
+    "usage": {
+      "input_tokens": 2958849,
+      "output_tokens": 587328,
+      "calls": 4535,
+      "errors": 0
+    },
+    "latency_ms": {
+      "p50": 298,
+      "max": 756
+    }
+  },
+  "world": {
+    "conflicts": 7,
+    "kindness": 33,
+    "rumors": 17,
+    "thefts": 0,
+    "built": 0,
+    "weddings": 0
+  },
+  "chronicleEntries": 4,
+  "logEntries": 169
+}

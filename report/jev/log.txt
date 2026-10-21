@@ -1,0 +1,169 @@
+[sol 1 07:30] (world) Early morning. The dome brightens, the colony wakes up.
+[sol 1 07:56] (life) Stesha and Irina are playing on the plaza
+[sol 1 08:02] (life) Praskovya and Anna are playing on the plaza
+[sol 1 08:06] (life) Dasha and Mira exchanged a few words on the plaza
+[sol 1 08:15] (conflict) Victor and Ruben quarreled on the plaza over a partition wall
+[sol 1 08:18] (kindness) Theo sat down beside Olena on the plaza and listened for a long while
+[sol 1 08:49] (kindness) Olena helped Fyodor carry containers at the depot
+[sol 1 09:00] (life) Elias and Lukerya exchanged a few words on the plaza
+[sol 1 09:05] (life) Hugo and Zoya are playing on the plaza
+[sol 1 09:07] (life) Tobias and Ada exchanged a few words on the plaza
+[sol 1 09:07] (life) Mira and Eudoxia exchanged a few words on the plaza
+[sol 1 09:13] (life) Milo and Anna exchanged a few words at the fountain
+[sol 1 09:32] (life) Olena and Peter exchanged a few words at the depot
+[sol 1 09:53] (rumor) Ephraim did not believe Tess: «Avdotya reported Tess to the administrator over a missing oxygen tank»
+[sol 1 09:57] (life) Dasha and Jacob exchanged a few words at the canteen
+[sol 1 09:58] (kindness) Anton sat down beside Thomas on the plaza and listened for a long while
+[sol 1 10:41] (life) Anton and Elias exchanged a few words on the plaza
+[sol 1 10:59] (kindness) Mira helped Elias carry containers on the plaza
+[sol 1 11:14] (life) Elias and Peter exchanged a few words on the plaza
+[sol 1 11:31] (kindness) Milo sat down beside Eudoxia on the plaza and listened for a long while
+[sol 1 12:14] (life) Marfa and Maya exchanged a few words on the plaza
+[sol 1 12:16] (life) Zoya and Lina are playing at the school
+[sol 1 12:57] (kindness) Ada made Praskovya a little lantern
+[sol 1 13:04] (life) Ephraim and Anton exchanged a few words in the bar
+[sol 1 13:12] (conflict) Sophia snatched Ustinya's drone on the plaza. Ustinya is in tears
+[sol 1 13:27] (conflict) Ada and Gregory quarreled on the plaza over a careless word
+[sol 1 13:32] (life) Zoya and Lina are playing on the plaza
+[sol 1 13:51] (kindness) Avdotya made Vera a little lantern
+[sol 1 14:27] (conflict) Zoya snatched Ustinya's drone on the plaza. Ustinya is in tears
+[sol 1 14:33] (conflict) Sophia snatched Matryona's drone at the Volkov module. Matryona is in tears
+[sol 1 14:36] (life) Ruben and Marfa exchanged a few words on the plaza
+[sol 1 14:43] (kindness) Olena sat down beside Ignat at the depot and listened for a long while
+[sol 1 14:57] (life) Marfa and Prokhor exchanged a few words on the plaza
+[sol 1 14:59] (life) Ustinya and Mira exchanged a few words on the plaza
+[sol 1 15:44] (kindness) Olena made Peter a little lantern
+[sol 1 15:54] (conflict) Lukerya snatched Sophia's drone on the plaza. Sophia is in tears
+[sol 1 15:55] (life) Nadia and Irina exchanged a few words on the plaza
+[sol 1 16:05] (life) Ustinya and Eudoxia exchanged a few words on the plaza
+[sol 1 16:19] (life) Avdotya and Juno exchanged a few words on the plaza
+[sol 1 16:58] (kindness) Tess made Stesha a little lantern
+[sol 1 17:21] (kindness) Milo made Thomas a little lantern
+[sol 1 17:46] (rumor) Anton did not believe Glafira: «Polina borrowed 19 credits from Glafira and still has not paid them back»
+[sol 1 18:20] (conflict) Zachary and Anton quarreled in the bar over a partition wall
+[sol 1 18:42] (kindness) Avdotya shared a ration with Matryona at the Volkov module
+[sol 1 18:54] (kindness) Dasha bought Tobias a drink in the bar
+[sol 1 19:47] (life) Peter and Zachary exchanged a few words at the Novak module
+[sol 1 19:50] (life) Ustinya and Matryona exchanged a few words on the plaza
+[sol 1 19:52] (kindness) Elias made Juno a little lantern
+[sol 1 19:56] (life) Anna and Ephraim exchanged a few words at the Lobanov module
+[sol 1 20:02] (life) Ksenia and Zoya exchanged a few words on the plaza
+[sol 1 20:10] (kindness) Elias helped Olena carry containers in the bar
+[sol 1 20:11] (kindness) Ignat bought Avdotya a drink in the bar
+[sol 1 20:13] (conflict) Ignat refused Prokhor a loan in front of people
+[sol 1 20:43] (life) Ignat and Elias exchanged a few words in the bar
+[sol 1 20:49] (rumor) Mira whispered to Tess in the bar: «Milo poached Mira's customer; that winter Mira nearly went broke»
+[sol 1 20:50] (life) Praskovya and Sophia exchanged a few words at the chapel
+[sol 1 21:00] (world) The dome dims. Lights come on in the module windows.
+[sol 1 21:41] (kindness) Prokhor helped Ruben carry containers in the bar
+[sol 1 21:45] (conflict) Maya and Ada quarreled in the bar over the queue at the depot
+[sol 2 00:00] (world) Midnight. Day 2 begins.
+[sol 2 06:00] (trade) Morning count: 72 rations and 24 parts in the depot; grew 48, made 6, the canteen and upkeep took 8 and 5. Rations went down to 1.
+[sol 2 06:00] (world) Dawn. The dome is still misty with night condensation.
+[sol 2 06:55] (life) Vera and Jacob exchanged a few words on the plaza
+[sol 2 07:32] (conflict) Emil again failed to pay Tess back — in front of people
+[sol 2 07:48] (life) Zoya and Thomas exchanged a few words on the plaza
+[sol 2 07:53] (life) Tess and Emil exchanged a few words at the Solovey module
+[sol 2 07:53] (life) Irina and Praskovya are playing on the plaza
+[sol 2 07:55] (life) Lina and Peter exchanged a few words on the plaza
+[sol 2 07:58] (life) Marfa and Nadia exchanged a few words on the plaza
+[sol 2 07:59] (life) Irina and Jacob are playing on the plaza
+[sol 2 08:10] (life) Anna and Milo exchanged a few words at the fountain
+[sol 2 08:10] (trade) Sava paid Maya back — 8 credits
+[sol 2 08:12] (life) Irina and Zoya exchanged a few words on the plaza
+[sol 2 08:29] (rumor) Maya whispered to Ignat on the plaza: «Sava borrowed 8 credits from Maya and still has not paid them back»
+[sol 2 08:51] (conflict) Ephraim and Glafira quarreled on the plaza over a partition wall
+[sol 2 09:00] (life) The dome is crowded and cheerless. Mira started talking about leaving to raise a dome of her own
+[sol 2 09:00] (world) Mira gathered 7 people — Eudoxia, Victor, Maya, Nadia, Prokhor, Zachary, Fyodor — and they set out through the airlock to found a new dome. They named the site «Aurora», 8 hours away
+[sol 2 09:32] (life) Ada and Matryona exchanged a few words at the Solovey module
+[sol 2 09:39] (life) Ephraim and Marfa exchanged a few words on the plaza
+[sol 2 09:48] (life) Jacob and Irina exchanged a few words on the plaza
+[sol 2 10:15] (life) Lukerya and Stesha are playing at the school
+[sol 2 10:41] (life) Hugo and Ada exchanged a few words at the Solovey module
+[sol 2 11:05] (kindness) Glafira made Irina a little lantern
+[sol 2 11:14] (life) Zoya and Matryona are playing at the school
+[sol 2 11:33] (kindness) Ruben helped Emil carry containers at the hydroponics
+[sol 2 11:34] (life) Jonas and Sophia are playing on the plaza
+[sol 2 11:48] (kindness) Ruben helped Glafira carry containers at the hydroponics
+[sol 2 12:03] (life) Felix and Jacob are playing at the school
+[sol 2 12:03] (kindness) Anton made Vera a little lantern
+[sol 2 13:05] (life) Jacob and Anna exchanged a few words on the plaza
+[sol 2 13:54] (life) Matryona and Stesha exchanged a few words at the school
+[sol 2 14:00] (conflict) Lina snatched Thomas's drone on the plaza. Thomas is in tears
+[sol 2 14:07] (kindness) Ruben helped Polina carry containers at the hydroponics
+[sol 2 14:39] (life) Juno and Stesha are playing at the fountain
+[sol 2 15:31] (life) Anna and Praskovya exchanged a few words on the plaza
+[sol 2 16:01] (life) Zoya and Irina exchanged a few words on the plaza
+[sol 2 16:12] (kindness) Olena helped Ignat carry containers at the depot
+[sol 2 16:23] (life) Tess and Juno exchanged a few words at the Pakhomov module
+[sol 2 16:28] (life) Hugo and Olena exchanged a few words on the road
+[sol 2 17:07] (life) Ustinya and Jacob exchanged a few words on the plaza
+[sol 2 18:09] (conflict) Vera snatched Peter's drone on the plaza. Peter is in tears
+[sol 2 18:24] (life) Tobias and Olena exchanged a few words in the bar
+[sol 2 18:36] (life) Sophia and Hugo exchanged a few words on the plaza
+[sol 2 18:44] (conflict) Lina snatched Thomas's drone at the Kuznetsov module. Thomas is in tears
+[sol 2 19:25] (conflict) Zoya snatched Lina's drone at the fountain. Lina is in tears
+[sol 2 19:36] (life) Avdotya and Simon exchanged a few words at the Volkov module
+[sol 2 19:51] (life) Hugo and Juno are playing on the plaza
+[sol 2 20:00] (life) Olena and Milo exchanged a few words at the Lobanov module
+[sol 2 20:07] (life) Dasha and Irina exchanged a few words on the plaza
+[sol 2 20:39] (life) Lukerya and Elias exchanged a few words at the fountain
+[sol 2 20:51] (life) Theo and Zoya exchanged a few words at the Kraynov module
+[sol 2 21:00] (world) The dome dims. Lights come on in the module windows.
+[sol 2 22:13] (life) Tess and Vera exchanged a few words at the Pakhomov module
+[sol 2 22:50] (kindness) Ruben made Jacob a little lantern
+[sol 3 00:00] (world) Midnight. Day 3 begins.
+[sol 3 06:00] (trade) Morning count: 67 rations and 23 parts in the depot; grew 33, made 4, the canteen and upkeep took 7 and 5.
+[sol 3 06:00] (world) Dawn. The canteen smells of fresh rations.
+[sol 3 07:10] (life) Glafira and Irina exchanged a few words on the plaza
+[sol 3 07:47] (kindness) Tess made Lina a little lantern
+[sol 3 08:01] (conflict) Ignat and Sava quarreled on the plaza over the queue at the depot
+[sol 3 08:23] (kindness) Elias helped Ignat carry containers on the plaza
+[sol 3 08:39] (kindness) Ada made Matryona a little lantern
+[sol 3 09:25] (conflict) Emil again failed to pay Tess back
+[sol 3 09:26] (life) Olena and Praskovya exchanged a few words at the depot
+[sol 3 10:32] (kindness) Anton helped Avdotya carry containers on the plaza
+[sol 3 10:33] (life) Milo and Stesha exchanged a few words on the plaza
+[sol 3 10:55] (life) Stesha and Peter exchanged a few words on the plaza
+[sol 3 11:12] (conflict) Ephraim and Tobias quarreled at the fountain over a partition wall
+[sol 3 11:18] (life) Felix and Ada exchanged a few words on the plaza
+[sol 3 11:31] (life) Juno and Hugo exchanged a few words at the school
+[sol 3 11:41] (conflict) Lina snatched Zoya's drone at the school. Zoya is in tears
+[sol 3 11:42] (life) Emil and Tobias exchanged a few words at the hydroponics
+[sol 3 12:13] (life) Hugo and Sophia exchanged a few words at the fountain
+[sol 3 12:33] (conflict) Stesha snatched Marfa's drone on the plaza. Marfa is in tears
+[sol 3 12:36] (life) Jonas and Felix exchanged a few words at the school
+[sol 3 12:40] (life) Tobias and Lina exchanged a few words on the plaza
+[sol 3 13:14] (life) Ephraim and Vera exchanged a few words on the plaza
+[sol 3 13:39] (life) Ignat and Anna exchanged a few words on the plaza
+[sol 3 14:11] (life) Sophia and Peter exchanged a few words on the plaza
+[sol 3 14:11] (rumor) Anton whispered to Gregory on the plaza: «quarreled with Emil over a partition wall»
+[sol 3 14:14] (conflict) Ustinya snatched Thomas's drone at the school. Thomas is in tears
+[sol 3 14:24] (conflict) Juno snatched Vera's drone on the plaza. Vera is in tears
+[sol 3 14:43] (life) Vera and Matryona exchanged a few words on the plaza
+[sol 3 15:09] (life) Thomas and Ephraim exchanged a few words on the plaza
+[sol 3 15:12] (life) Elias and Lukerya exchanged a few words on the plaza
+[sol 3 15:37] (life) Ada and Emil exchanged a few words at the Solovey module
+[sol 3 15:38] (kindness) Elias helped Ignat carry containers on the plaza
+[sol 3 15:57] (rumor) Glafira whispered to Polina at the hydroponics: «quarreled with Thomas over a partition wall»
+[sol 3 15:59] (life) Zoya and Gregory exchanged a few words on the plaza
+[sol 3 17:08] (kindness) Elias made Matryona a little lantern
+[sol 3 17:40] (kindness) Olena helped Avdotya carry containers in the bar
+[sol 3 17:44] (life) Jacob and Milo exchanged a few words at the Lobanov module
+[sol 3 18:24] (conflict) Juno snatched Marfa's drone on the plaza. Marfa is in tears
+[sol 3 18:31] (life) Ruben and Ksenia exchanged a few words at the Zykov module
+[sol 3 18:42] (life) Marfa and Jonas exchanged a few words on the plaza
+[sol 3 18:46] (rumor) Elias did not believe Anton: «quarreled with Zachary over a partition wall»
+[sol 3 19:36] (life) Olena and Ustinya exchanged a few words on the plaza
+[sol 3 19:36] (kindness) Anton bought Ruben a drink in the bar
+[sol 3 19:45] (life) Juno and Theo exchanged a few words on the plaza
+[sol 3 20:30] (rumor) Avdotya did not believe Gregory: «quarreled with Anton over a partition wall»
+[sol 3 20:32] (life) Ustinya and Hugo exchanged a few words on the plaza
+[sol 3 21:00] (world) The dome dims. Lights come on in the module windows.
+[sol 3 21:16] (life) Olena and Milo exchanged a few words at the Lobanov module
+[sol 3 21:45] (life) Marfa and Avdotya exchanged a few words on the plaza
+[sol 3 22:02] (kindness) Ada bought Milo a drink in the bar
+[sol 3 22:10] (life) Irina and Marfa exchanged a few words on the plaza
+[sol 3 22:21] (life) Matryona and Lina exchanged a few words on the plaza
+[sol 3 22:28] (rumor) Sava did not believe Anton: «quarreled with Zachary over a partition wall»
+[sol 4 00:00] (world) Midnight. Day 4 begins.
