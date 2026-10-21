@@ -1,16 +1,16 @@
-# Террариум — сервис мозга System One
+# Terrarium — System One brain service
 
-Отдельный Python-сервис, который принимает состояние персонажа словами и вопросы, а отдаёт распределения.
-Клиент (`client/src/sim/brain.ts`, `RemoteBrain`) шлёт сюда `POST /decide` и смешивает ответ с приором движка.
+A separate Python service that takes a character's state in words plus questions, and returns distributions.
+The client (`client/src/sim/brain.ts`, `RemoteBrain`) sends `POST /decide` here and blends the answer with the engine prior.
 
-## Протокол
+## Protocol
 
 ```
 POST /decide
-{ "state": "Ты — Пётр, 41, механик...", "questions": [
-    { "id": "strategy", "type": "choice", "text": "Что ты сейчас сделаешь?", "options": ["поесть", "работать"] },
-    { "id": "desperate", "type": "score", "text": "Насколько ты отчаялся?", "range": [0, 3] },
-    { "id": "important", "type": "noul", "text": "Это важный момент в твоей жизни?" } ] }
+{ "state": "You are Peter, 41, a mechanic...", "questions": [
+    { "id": "strategy", "type": "choice", "text": "What will you do now?", "options": ["eat", "work"] },
+    { "id": "desperate", "type": "score", "text": "How desperate are you?", "range": [0, 3] },
+    { "id": "important", "type": "noul", "text": "Is this an important moment in your life?" } ] }
 
 → { "answers": [
     { "id": "strategy", "probabilities": [0.7, 0.3], "confidence": 0.8 },
@@ -18,9 +18,9 @@ POST /decide
     { "id": "important", "value": 0.2, "confidence": 0.6 } ], "backend": "claude:claude-opus-5" }
 ```
 
-`GET /health` — бэкенд, число решений, латентность. `GET /log?n=20` — последние запросы и ответы.
+`GET /health` — backend, number of decisions, latency. `GET /log?n=20` — the latest requests and answers.
 
-## Запуск
+## Running
 
 ```bash
 python3 -m venv brain/.venv && brain/.venv/bin/pip install -r brain/requirements.txt
@@ -30,27 +30,27 @@ BRAIN_BACKEND=claude BRAIN_MODEL=claude-opus-5 brain/.venv/bin/uvicorn brain.ser
 BRAIN_BACKEND=local LLM_BASE_URL=http://localhost:8000/v1 LLM_MODEL=Qwen/Qwen3-30B-A3B brain/.venv/bin/uvicorn brain.server:app --port 8765
 ```
 
-Запускать из корня репозитория (`brain` — пакет). В клиенте переключить мозг в верхней панели на «сервис»;
-адрес по умолчанию `http://localhost:8765/decide`, другой можно положить в `localStorage.brainUrl`.
+Run from the repository root (`brain` is a package). In the client, switch the brain in the top bar to "service";
+the default address is `http://localhost:8765/decide`, another one can be put into `localStorage.brainUrl`.
 
-## Бэкенды
+## Backends
 
-| бэкенд | что это | когда |
+| backend | what it is | when |
 |---|---|---|
-| `random` | кости | отладка движка без мозга |
-| `claude` | Claude через официальный SDK, `claude-opus-5` по умолчанию, effort `low`, системный промпт кэшируется | лучшее качество из коробки; ключ из `ANTHROPIC_API_KEY` или профиля `ant auth login` |
-| `local` | любая модель за OpenAI-совместимым `/chat/completions` (vLLM, Ollama, so1) | локально и бесплатно, качество зависит от модели |
+| `random` | dice | debugging the engine without a brain |
+| `claude` | Claude through the official SDK, `claude-opus-5` by default, effort `low`, the system prompt is cached | best quality out of the box; the key comes from `ANTHROPIC_API_KEY` or the `ant auth login` profile |
+| `local` | any model behind an OpenAI-compatible `/chat/completions` (vLLM, Ollama, so1) | local and free, quality depends on the model |
 
-Ответ модели парсится терпимо: JSON внутри текста или в блоке кода, пропущенные вопросы и кривые
-распределения заменяются равномерными. На отказ или лимит сервис отвечает равномерно, а не падает.
+The model's answer is parsed leniently: JSON inside text or in a code block; skipped questions and malformed
+distributions are replaced with uniform ones. On a refusal or a rate limit the service answers uniformly rather than failing.
 
-## Сценарии
+## Scenarios
 
-`brain/scenarios.py` — двадцать фиксированных ситуаций из плана (§14): голод с деньгами и без, честный
-и нечестный, патрульный рядом, ночь, рабочий день, одиночество, должник рядом, голодный друг, враг рядом
-у вспыльчивого и у робкого, слух от недоверяемого и от друга, шёпот «отомстить» без повода и с поводом,
-пожар у соседа для смелого и для труса, стройка друга, отказ при всех. У каждой мягкие ожидания:
-«вероятность выше порога» или «вариант А вероятнее варианта Б», а не единственно правильный ответ.
+`brain/scenarios.py` — twenty fixed situations from the plan (§14): hunger with and without money, honest
+and dishonest, a patrol officer nearby, night, a working day, loneliness, a debtor nearby, a hungry friend, an enemy nearby
+for a hot-tempered and for a timid character, a rumor from someone untrusted and from a friend, the whisper "take revenge" with and without a reason,
+a fire at a neighbor's for a brave and for a cowardly character, a friend's construction, a refusal in front of everyone. Each has soft expectations:
+"probability above a threshold" or "option A more likely than option B", not a single correct answer.
 
 ```bash
 brain/.venv/bin/python -m brain.eval --backend random
@@ -58,13 +58,13 @@ brain/.venv/bin/python -m brain.eval --backend claude --backend random --verbose
 brain/.venv/bin/python -m brain.eval --url http://localhost:8765/decide --json out.json
 ```
 
-Печатает таблицу по сценариям, долю пройденных проверок и латентность. Кости дают около 30–50%,
-это нижняя планка; осмысленный мозг должен уходить за 80%.
+Prints a table by scenario, the share of checks passed and latency. Dice give about 30–50%,
+that is the floor; a meaningful brain should go past 80%.
 
 ## Jev (TypeSafe)
 
-`BRAIN_BACKEND=jev`, ключ `TYPESAFE_API_KEY` (из `.env` в корне проекта или окружения), модель `JEV_MODEL`
-(по умолчанию `jev-latest`). Вопросы протокола отображаются в примитивы TypeSafe один к одному:
-choice → choice с `criteria` {o0: вариант, …}, score → score с уровнями из диапазона, noul → noul.
-Ответы: вероятности по вариантам в порядке протокола, `confidence` от модели (для noul считается из
-удалённости от 0.5). На 429/529 повтор с задержкой. `GET /health` показывает токены, `GET /log` — журнал.
+`BRAIN_BACKEND=jev`, the `TYPESAFE_API_KEY` key (from `.env` in the project root or the environment), the `JEV_MODEL` model
+(`jev-latest` by default). Protocol questions map to TypeSafe primitives one to one:
+choice → choice with `criteria` {o0: option, …}, score → score with levels from the range, noul → noul.
+Answers: probabilities per option in protocol order, `confidence` from the model (for noul computed from
+the distance from 0.5). On 429/529, retry with a delay. `GET /health` shows tokens, `GET /log` the log.
