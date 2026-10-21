@@ -1,0 +1,81 @@
+class JevBackend:
+    """TypeSafe's Jev: a System One model. Our protocol is modelled on its API, so the mapping is direct:
+    choice -> choice (criteria keyed o0..oN), score -> score (levels built from the range), noul -> noul.
+    POST https://api.typesafe.ai/v1/systemone, key in TYPESAFE_API_KEY. Retries on 429/529 with backoff."""
+
+    name = "jev"
+
+    def __init__(self, model: str | None = None, base_url: str | None = None) -> None:
+        import httpx
+
+        self.key = os.environ.get("TYPESAFE_API_KEY")
+        if not self.key:
+            raise RuntimeError("no TYPESAFE_API_KEY: put the key in .env at the repo root or export it in the environment")
+        self.model = model or os.environ.get("JEV_MODEL", "jev-latest")
+        self.base_url = (base_url or os.environ.get("TYPESAFE_BASE_URL", "https://api.typesafe.ai")).rstrip("/")
+        self.client = httpx.Client(timeout=30.0)
+        self.name = f"jev:{self.model}"
+        self.usage = {"input_tokens": 0, "output_tokens": 0, "calls": 0, "errors": 0}
+
+    @staticmethod
+    def to_request(state: str, questions: list[Question], model: str) -> dict[str, Any]:
+        qs: dict[str, Any] = {}
+        for q in questions:
+            if q.type == "choice":
+                opts = q.options or []
+                qs[q.id] = {"type": "choice", "instructions": q.text, "criteria": {f"o{i}": label for i, label in enumerate(opts)}}
+            elif q.type == "score":
+                lo, hi = q.range or (0, 3)
+                n = max(2, min(10, int(round(hi - lo)) + 1))
+                words = ["not at all", "slightly", "noticeably", "strongly", "very strongly", "utterly"]
+                levels = [f"{int(lo) + i}: {words[min(i, len(words) - 1)] if n <= len(words) else 'level ' + str(int(lo) + i)}" for i in range(n)]
+                qs[q.id] = {"type": "score", "instructions": q.text, "criteria": levels}
+            else:
+                qs[q.id] = {"type": "noul", "instructions": q.text}
+        return {"model": model, "state": state, "questions": qs}
+
+    @staticmethod
+    def from_response(data: dict[str, Any], questions: list[Question]) -> list[Answer]:
+        answers = data.get("answers", {})
+        out: list[Answer] = []
+        for q in questions:
+            a = answers.get(q.id)
+            if not a:
+                out.append(uniform_answer(q))
+                continue
+            conf = a.get("confidence")
+            if q.type == "choice":
+                probs = a.get("probabilities", {})
+                ps = _norm([float(probs.get(f"o{i}", 0.0)) for i in range(len(q.options or []))])
+                out.append(Answer(id=q.id, probabilities=ps, confidence=float(conf) if conf is not None else 0.5, raw=a))
+            elif q.type == "score":
+                lo, hi = q.range or (0, 3)
+                sc = float(a.get("score", 0.0)) + lo
+                out.append(Answer(id=q.id, score=max(lo, min(hi, sc)), confidence=float(conf) if conf is not None else 0.5, raw=a))
+            else:
+                v = float(a.get("noul", 0.5))
+                out.append(Answer(id=q.id, value=v, confidence=abs(v - 0.5) * 2, raw=a))
+        return out
+
+    def decide(self, state: str, questions: list[Question]) -> list[Answer]:
+        body = self.to_request(state, questions, self.model)
+        headers = {"Authorization": f"Bearer {self.key}", "Content-Type": "application/json"}
+        delay = 0.5
+        for attempt in range(4):
+            r = self.client.post(f"{self.base_url}/v1/systemone", json=body, headers=headers)
+            if r.status_code in (429, 529) and attempt < 3:
+                time.sleep(delay)
+                delay *= 2
+                continue
+            if r.status_code >= 400:
+                self.usage["errors"] += 1
+                raise RuntimeError(f"Jev {r.status_code}: {r.text[:300]}")
+            data = r.json()
+            u = data.get("usage") or {}
+            self.usage["input_tokens"] += int(u.get("input_tokens", 0))
+            self.usage["output_tokens"] += int(u.get("output_tokens", 0))
+            self.usage["calls"] += 1
+            return self.from_response(data, questions)
+        raise RuntimeError("Jev: rate limit exceeded, try again later")
+
+

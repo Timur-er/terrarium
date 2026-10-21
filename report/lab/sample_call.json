@@ -1,0 +1,79 @@
+{
+ "state": "You are Gregory, 39, a patrol officer of the Pakhomov family. Character: stingy.\nNow: exhausted. Mood: cheerful.\nTime: afternoon, sol 2. The depot is open, the canteen is open, the workshop is open.\nYou are on the plaza. Nearby: Glafira (agronomist, walking to find someone); Olena (quartermaster, chatting with Gregory); Ada (comms operator, walking the plaza); Vera (girl, playing).\nRelations: Tess — family, friend, trusted. Juno — family, friend, trusted. Vera — family, friend, trusted. Peter — acquaintance. Praskovya — acquaintance.\nMemories: yesterday quarreled with Ada over a careless word.\nGoals: earn the colony's respect.",
+ "questions": [
+  {
+   "id": "strategy",
+   "type": "choice",
+   "text": "What do you do now?",
+   "options": [
+    "look after yourself",
+    "work",
+    "be with people",
+    "rest"
+   ]
+  },
+  {
+   "id": "how:rest",
+   "type": "choice",
+   "text": "If you decide to «rest» — how exactly?",
+   "options": [
+    "sit at home",
+    "wander around the colony"
+   ]
+  },
+  {
+   "id": "desperate",
+   "type": "score",
+   "text": "How desperate are you?",
+   "range": [
+    0,
+    3
+   ]
+  },
+  {
+   "id": "important",
+   "type": "noul",
+   "text": "Is this moment important in your life?"
+  },
+  {
+   "id": "fear",
+   "type": "noul",
+   "text": "Are you afraid of the consequences if you act dishonestly?"
+  }
+ ],
+ "answers": [
+  {
+   "id": "strategy",
+   "confidence": 0.12,
+   "probabilities": [
+    0.09,
+    0.25,
+    0.34,
+    0.32
+   ]
+  },
+  {
+   "id": "how:rest",
+   "confidence": 0.18,
+   "probabilities": [
+    0.59,
+    0.41
+   ]
+  },
+  {
+   "id": "desperate",
+   "confidence": 0.5,
+   "score": 0.52
+  },
+  {
+   "id": "important",
+   "confidence": 0.4,
+   "value": 0.3
+  },
+  {
+   "id": "fear",
+   "confidence": 0.19999999999999996,
+   "value": 0.6
+  }
+ ]
+}
